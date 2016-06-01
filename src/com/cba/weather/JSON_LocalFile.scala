@@ -18,8 +18,8 @@ object type_name {
     val city = hqlContext.sql("SELECT * from Code_AUS").collect().foreach(println)
     val op = sqlContext.sql("select list.name, list.coord.lon, list.coord.lat, list.dt, list.weather, list.main.temp, list.main.pressure, list.main.humidity from jt").first()
     for (i <- 0 to op.length - 1) {
-      var ro = op.getList(0).get(i).toString() + "|" + op.getList(1).get(i) + "|" + op.getList(2).get(i) + "|" + op.getList(3).get(i)
-      println(ro)
+      var result = op.getList(0).get(i).toString() + "|" + op.getList(1).get(i) + "|" + op.getList(2).get(i) + "|" + op.getList(3).get(i)+ "|" + op.getList(4).get(i)+ "|" + op.getList(5).get(i)+ "|" + op.getList(6).get(i)++ "|" + op.getList(7).get(i)
+      println(result)
     }
 
   }
